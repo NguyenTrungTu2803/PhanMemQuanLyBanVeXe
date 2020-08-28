@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{914B6D73-D006-4CC7-A365-42AB872E911C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DANGNHAP</RootNamespace>
+    <AssemblyName>DANGNHAP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AcountDAO.cs" />
+    <Compile Include="DAO\ConnectionStringDatagril.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\AccountcongtyDAO.cs" />
+    <Compile Include="frmCapPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapPass.Designer.cs">
+      <DependentUpon>frmCapPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChiTietTuyenXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietTuyenXe.Designer.cs">
+      <DependentUpon>frmChiTietTuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanQuyen.Designer.cs">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmquyencongty.cs" />
+    <Compile Include="FrmLoaiXe7Cho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoaiXe7Cho.Designer.cs">
+      <DependentUpon>FrmLoaiXe7Cho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonTinhTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonTinhTien.Designer.cs">
+      <DependentUpon>HoaDonTinhTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RePortDSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RePortDSNV.Designer.cs">
+      <DependentUpon>RePortDSNV.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCapPass.resx">
+      <DependentUpon>frmCapPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietTuyenXe.resx">
+      <DependentUpon>frmChiTietTuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanQuyen.resx">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoaiXe7Cho.resx">
+      <DependentUpon>FrmLoaiXe7Cho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonTinhTien.resx">
+      <DependentUpon>HoaDonTinhTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportACCOUNTDAILY.rdlc" />
+    <EmbeddedResource Include="RePortDSNV.resx">
+      <DependentUpon>RePortDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AcountDataSet.xsc">
+      <DependentUpon>AcountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AcountDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcountDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AcountDataSet.xss">
+      <DependentUpon>AcountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\AcountDataSet.ACCOUNTDAILYDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.ACCOUNTDAILYRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.ACCOUNTDAILYRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.ACCOUNTDAILYRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.LoaiNguoiDungDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.LoaiNguoiDungRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.LoaiNguoiDungRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.LoaiNguoiDungRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.PhanQuyenDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.PhanQuyenRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.PhanQuyenRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet.PhanQuyenRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ACCOUNTDAILYDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ACCOUNTDAILYRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ACCOUNTDAILYRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ACCOUNTDAILYRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.BanVeDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.BanVeRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.BanVeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.BanVeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChiTietTuyenDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChiTietTuyenRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChiTietTuyenRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChiTietTuyenRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChoNgoiDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChoNgoiRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChoNgoiRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChoNgoiRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChuyenXeDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChuyenXeRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChuyenXeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ChuyenXeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.DiaDiemDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.DiaDiemRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.DiaDiemRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.DiaDiemRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.LoaiNguoiDungDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.LoaiNguoiDungRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.LoaiNguoiDungRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.LoaiNguoiDungRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.PhanQuyenDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.PhanQuyenRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.PhanQuyenRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.PhanQuyenRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ThoiDiemDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ThoiDiemRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ThoiDiemRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.ThoiDiemRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.TuyenXeDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.TuyenXeRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.TuyenXeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.TuyenXeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.Xe7ChoDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.Xe7ChoRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.Xe7ChoRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.Xe7ChoRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.XeDataTable.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.XeRow.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.XeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AcountDataSet1.XeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.ACCOUNTDAILYTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.BanVeTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.ChiTietTuyenTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.ChoNgoiTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.ChuyenXeTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.DiaDiemTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.LoaiNguoiDungTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.PhanQuyenTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.QueriesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.ThoiDiemTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.TuyenXeTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.Xe7ChoTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSet1TableAdapters.XeTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSetTableAdapters.ACCOUNTDAILYTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSetTableAdapters.LoaiNguoiDungTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSetTableAdapters.PhanQuyenTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.AcountDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.DAO.AccountcongtyDAO.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.DAO.AcountDAO.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.DAO.ConnectionStringDatagril.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.DAO.DataProvider.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\DANGNHAP.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\frmCapPass.datasource" />
+    <None Include="Properties\DataSources\frmChiTietTuyenXe.datasource" />
+    <None Include="Properties\DataSources\FrmLoaiXe7Cho.datasource" />
+    <None Include="Properties\DataSources\frmlogin.datasource" />
+    <None Include="Properties\DataSources\frmMain.datasource" />
+    <None Include="Properties\DataSources\frmPhanQuyen.datasource" />
+    <None Include="Properties\DataSources\frmquyencongty.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\RePortDSNV.datasource" />
+    <None Include="Properties\DataSources\RePortXe7Cho.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter-bus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cap_pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanquyen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cap_pass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferme1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
